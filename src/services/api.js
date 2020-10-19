@@ -25,11 +25,9 @@ export default class Api {
 					};
 				})
 				.catch(err => {
-					notification.showError(err);
+					notification.showErrors(err);
 					return {
 						status: false,
-						error: err.message,
-						description: err.response.data.message,
 					};
 				});
 		} catch (error) {
